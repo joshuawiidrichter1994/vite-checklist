@@ -1,4 +1,4 @@
-function GearForm() {
+function GearForm({ gear }) {
   return (
     <div>
       <form>

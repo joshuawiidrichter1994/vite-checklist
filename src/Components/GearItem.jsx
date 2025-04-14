@@ -1,5 +1,5 @@
-function GearItem({ gear }) {
-  return <div>{gear}</div>;
+function GearItem({ item }) {
+  return <div>{item}</div>;
 }
 
 export default GearItem;
