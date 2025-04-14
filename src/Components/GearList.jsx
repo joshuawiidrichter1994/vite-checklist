@@ -1,3 +1,5 @@
+import GearItem from './GearItem';
+
 function GearList() {
   return <></>;
 }
