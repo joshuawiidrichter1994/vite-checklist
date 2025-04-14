@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import GearItem from './Components/GearItem';
 
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [gear, setGear] = useState([]);
 
-  return <></>;
+  return (
+    <>
+      <div>
+        <GearItem />
+      </div>
+    </>
+  );
 }
 
 export default App;
