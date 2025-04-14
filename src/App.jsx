@@ -14,13 +14,12 @@ function App() {
   ]);
 
   const addItem = (item) => {
-    gear.append(item);
-    setGear(gear);
+    setGear(gear.append(item));
   };
 
   return (
     <div>
-      <GearForm gear={gear} />
+      <GearForm gear={gear} addItem={addItem} />
       <GearList gear={gear} />
     </div>
   );
