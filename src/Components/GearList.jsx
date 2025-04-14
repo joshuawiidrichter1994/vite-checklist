@@ -1,7 +1,11 @@
 import GearItem from './GearItem';
 
-function GearList() {
-  return <></>;
+function GearList({ gear }) {
+  return (
+    <div>
+      <GearItem gear={gear} />
+    </div>
+  );
 }
 
 export default GearList;

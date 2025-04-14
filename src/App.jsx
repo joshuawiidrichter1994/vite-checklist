@@ -5,12 +5,12 @@ import GearForm from './Components/GearForm';
 import './App.css';
 
 function App() {
-  const [gear, setGear] = useState([]);
+  const [gear, setGear] = useState(['gear item 1']);
 
   return (
     <div>
-      <GearForm />
-      <GearList />
+      <GearForm gear={gear} />
+      <GearList gear={gear} />
     </div>
   );
 }

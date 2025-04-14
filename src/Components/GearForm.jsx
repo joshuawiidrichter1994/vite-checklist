@@ -1,11 +1,7 @@
 function GearForm() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div>
-      <form onSubmit="handleSubmit">
+      <form>
         <input placeholder="Type item name" type="text" />
         <button type="submit">Add item</button>
       </form>
