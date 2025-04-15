@@ -1,13 +1,14 @@
 import './GearItem.css';
 
-function GearItem({ item }) {
+function GearItem({ item, togglePacked }) {
   return (
     <div className="item-container">
       <div className="gear-item">{item.name}</div>
-      <div className="check-box">
-        <div className="checked"></div>
-        <div className="unchecked"></div>
-      </div>
+      <input
+        type="checkbox"
+        checked={item.packed}
+        onChange={() => togglePacked(item.id)}
+      />
     </div>
   );
 }

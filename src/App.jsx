@@ -22,11 +22,15 @@ function App() {
     setGear([...gear, newItem]);
   };
 
+  const toggledPacked = (id) => {
+    setGear([...gear, (gear[id].packed = true)]);
+  };
+
   return (
     <div>
       <h1>Gear checklist</h1>
       <GearForm addItem={addItem} />
-      <GearList gear={gear} />
+      <GearList gear={gear} togglePacked={toggledPacked} />
     </div>
   );
 }
