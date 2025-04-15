@@ -16,6 +16,7 @@ function GearForm({ addItem }) {
         <input
           placeholder="Type item name"
           type="text"
+          value={item}
           onChange={(e) => setItem(e.target.value)}
         />
         <button type="submit">Add item</button>
