@@ -5,12 +5,14 @@ function GearForm({ addItem }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addItem(item);
+    if (!item.trim()) return;
+    addItem(item.trim());
+    setItem('');
   };
 
   return (
     <div>
-      <form onSubmit="handleSubmit">
+      <form onSubmit={handleSubmit}>
         <input
           placeholder="Type item name"
           type="text"
