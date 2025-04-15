@@ -30,11 +30,19 @@ function App() {
     );
   };
 
+  const deleteItem = (id) => {
+    setGear((prevGear) => prevGear.filter((item) => item.id !== id));
+  };
+
   return (
     <div>
       <h1>Gear checklist</h1>
       <GearForm addItem={addItem} />
-      <GearList gear={gear} togglePacked={toggledPacked} />
+      <GearList
+        gear={gear}
+        togglePacked={toggledPacked}
+        deleteItem={deleteItem}
+      />
     </div>
   );
 }

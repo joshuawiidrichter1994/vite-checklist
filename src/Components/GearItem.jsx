@@ -1,6 +1,6 @@
 import './GearItem.css';
 
-function GearItem({ item, togglePacked }) {
+function GearItem({ item, togglePacked, deleteItem }) {
   return (
     <div className="item-container">
       <div className="gear-item">{item.name}</div>
@@ -9,6 +9,9 @@ function GearItem({ item, togglePacked }) {
         checked={item.packed}
         onChange={() => togglePacked(item.id)}
       />
+      <button className="delete-btn" onClick={() => deleteItem(item.id)}>
+        🗑️
+      </button>
     </div>
   );
 }
