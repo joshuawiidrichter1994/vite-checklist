@@ -23,7 +23,11 @@ function App() {
   };
 
   const toggledPacked = (id) => {
-    setGear([...gear, (gear[id].packed = true)]);
+    setGear((prevGear) =>
+      prevGear.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
   };
 
   return (
